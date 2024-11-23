@@ -1,0 +1,19 @@
+{% extends 'index.html'  %}
+{% load static %}
+{% block title %}My Image Page5!{% endblock %}
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row">
+        {% if val %}
+        <div class="col-md-12" style="margin: 0 auto;">
+            <img src="{% static 'django.png' %}" class="img-fluid" alt="Responsive image">
+        </div>
+        {% else %}
+        <div class="col-md-12" style="margin: 0 auto;">
+            <img src="{% static 'python.png' %}" class="img-fluid" alt="Responsive image">
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
